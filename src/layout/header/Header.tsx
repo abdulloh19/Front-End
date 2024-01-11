@@ -12,19 +12,22 @@ const Header = ({ onToggle }: HeaderProps) => {
   const { toggleColorMode, colorMode } = useColorMode();
   return (
     <Box
+      zIndex={99}
       w={"full"}
       h={"10vh"}
       px={10}
       borderBottom={"1px"}
       borderBottomColor={useColorModeValue("gray.400", "gray.700")}
       pos={"fixed"}
+      bg={useColorModeValue("gray.50", "gray.900")}
+      color={useColorModeValue("gray.700", "gray.200")}
       left={0}
       top={0}
       right={0}
     >
       <Flex justify={"space-between"} align={"center"} h={"full"}>
         <HStack>
-          <Icon  as={BsFilterLeft} onClick={onToggle} w={6} h={6} cursor={"pointer"} />
+          <Icon as={BsFilterLeft} onClick={onToggle} w={6} h={6} cursor={"pointer"} />
           <Link href={"/"}>{colorMode === "light" ? <DarkLogo /> : <LightLogo />}</Link>
         </HStack>
         <HStack>
