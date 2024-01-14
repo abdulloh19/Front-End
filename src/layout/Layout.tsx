@@ -3,6 +3,7 @@ import { LayoutProps } from "./layout.props";
 import Header from "./header/Header";
 import { FunctionComponent, useState } from "react";
 import Sidebar from "./sidebar/Sidebar";
+import Footer from "./footer/Footer";
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
   const [toggle, setToggle] = useState(false);
@@ -12,9 +13,10 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
     <Box maxW={"full"} overflow={"hidden"}>
       <Header onToggle={onToggle} />
       <Sidebar toggle={toggle} />
-      <Box mt={"11vh"} pl={{ base: 0, lg: "320px" }} transition={"all .4s ease"}>
+      <Box mt={"11vh"} pl={{ base: 0, lg: "320px" }} minH={"90vh"} transition={"all .4s ease"}>
         <Container maxW={"conatiner.lg"}>{children}</Container>
       </Box>
+      <Footer />
     </Box>
   );
 };

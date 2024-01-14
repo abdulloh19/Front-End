@@ -10,7 +10,7 @@ const Testimonilas = () => {
     <>
       <SectionTitle textAlign={"center"} title="Testimonials" subTitle="10,000+ unique online course list designs" />
 
-      <Carousel responsive={testimonilasCarousel} arrows={true} showDots={false} infinite>
+      <Carousel responsive={testimonilasCarousel} arrows={true} showDots={false} autoPlay={true}  infinite>
         {data.map((item, idx) => (
           <Center key={idx} flexDirection={"column"} maxW={"container.sm"} mx={"auto"}>
             <Icon as={ImQuotesRight} fontSize={100} />

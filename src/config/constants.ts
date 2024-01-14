@@ -92,4 +92,4 @@ export const categories = [
   },
 ];
 
-
+export const trustedCompeny = [AiFillAmazonCircle, SiAmd, SiCisco, FaApplePay, SiLogitech, SiSpotify];

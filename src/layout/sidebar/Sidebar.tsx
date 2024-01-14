@@ -9,8 +9,8 @@ const Sidebar = ({ toggle }: SidebarProps) => {
   const router = useRouter();
   return (
     <Box
-      zIndex={99}
-      w={{ base: "full", lg: "300px" }}
+      zIndex={1005}
+      w={{ base: "full", lg: "300px" }} 
       h={"90vh"}
       bg={useColorModeValue("gray.50", "gray.900")}
       color={useColorModeValue("gray.700", "gray.200")}

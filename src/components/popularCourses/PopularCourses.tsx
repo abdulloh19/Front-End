@@ -13,10 +13,10 @@ const PopularCourses = () => {
   return (
     <>
       <SectionTitle title="Explore Featured Courses" subTitle="10,000+ unique online course list designs" />
-      <Carousel responsive={courseCorusel} showDots={false} arrows={true} autoPlay={true} autoPlaySpeed={5000} infinite>
+      <Carousel responsive={courseCorusel} showDots={false} arrows={false} autoPlay={true} autoPlaySpeed={5000} infinite>
         {data.map((item) => (
           <Stack key={item.title} p={3} cursor={"pointer"} spacing={3}>
-            <Image src={item.image} alt={item.title} objectFit={"cover"} h={"210px"} w={"300px"} borderRadius={"lg"} />
+            <Image src={item.image} alt={item.title} objectFit={"cover"} h={"210px"} w={"300px"} width={"full"} borderRadius={"lg"} />
             <HStack>
               <Text color={"#e59819"}>{item.reviewAvarage.toFixed(1)}</Text>
               <ReactStars edit={true} color2="#e59819" value={item.reviewAvarage} />
