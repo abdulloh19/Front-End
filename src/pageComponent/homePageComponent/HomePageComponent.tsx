@@ -10,9 +10,9 @@ const HomePageComponent = () => {
       <PopularCourses />
       <HowItWorks />
       <Instructors />
+      <Testimonilas />
       <Newsletter />
       <Sposorship />
-      <Testimonilas />
     </Stack>
   );
 };
