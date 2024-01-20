@@ -1,21 +1,24 @@
 import { Button, Card, CardBody, Grid, Heading, Icon, Stack, Text } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 import { FaJava } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <Card mt={10}>
       <CardBody p={10}>
         <Grid minH={"50vh"} gridTemplateColumns={{ base: "100%", md: "50% 50%" }} gap={5} justifyContent={"center"} alignItems={"center"}>
           <Stack spacing={3}>
-            <Heading>Find A Perfect Online Course</Heading>
-            <Text>You can access 7900+ different courses from 600 profissional trainers for free</Text>
+            <Heading>{t("hero_title", { ns: "home" })}</Heading>
+            <Text>{t("hero_description", { ns: "home" })}</Text>
             <Grid gridTemplateColumns={{ base: "100%", md: "50% 50%" }} gap={5}>
               <Button colorScheme="facebook" h={14} rightIcon={<VscDebugStart />}>
-                Start Learing
+                {t("hero_start_learning_btn", { ns: "home" })}
               </Button>
               <Button colorScheme="facebook" h={14} variant={"outline"}>
-                Become Instuctor
+                {t("hero_become_instructor_btn", { ns: "home" })}
               </Button>
             </Grid>
           </Stack>

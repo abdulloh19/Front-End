@@ -4,9 +4,11 @@ import { useRouter } from "next/router";
 import React from "react";
 import { navigation } from "src/config/constants";
 import { SidebarProps } from "./sidebar.props";
+import { useTranslation } from "react-i18next";
 
 const Sidebar = ({ toggle }: SidebarProps) => {
   const router = useRouter();
+  const { t, i18n } = useTranslation();
   return (
     <Box
       zIndex={1005}
@@ -31,7 +33,7 @@ const Sidebar = ({ toggle }: SidebarProps) => {
       <Container maxW={"container.xl"}>
         {navigation.map((item, idx) => (
           <Box key={idx} mt={10}>
-            <Text>{item.title}</Text>
+            <Text>{t(item.title, {ns: 'layout'})}</Text>
             {item.links.map((nav, idx) => {
               const active = router.asPath == nav.route;
               return (
@@ -39,7 +41,7 @@ const Sidebar = ({ toggle }: SidebarProps) => {
                   <Button colorScheme="facebook" variant={active ? "solid" : "ghost"} w={"full"} justifyContent={"flex-start"} h={14} mt={2}>
                     <HStack gap={2}>
                       <Icon as={nav.icon} />
-                      <Text>{nav.label}</Text>
+                      <Text>{t(nav.label, {ns: 'layout'})}</Text>
                     </HStack>
                   </Button>
                 </Link>

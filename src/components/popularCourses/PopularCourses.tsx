@@ -8,17 +8,20 @@ import { CiViewList } from "react-icons/ci";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { SiGoogleanalytics } from "react-icons/si";
 import { courseCorusel } from "src/config/carousel";
+import { useTranslation } from "react-i18next";
 
 const PopularCourses = () => {
+  const { t } = useTranslation();
+
   return (
     <>
-      <SectionTitle title="Explore Featured Courses" subTitle="10,000+ unique online course list designs" />
+      <SectionTitle title={t("popular_courses_title", { ns: "home" })} subTitle={t("popular_courses_description", { ns: "home" })} />
       <Carousel responsive={courseCorusel} showDots={false} arrows={false} autoPlay={true} autoPlaySpeed={5000} infinite>
         {data.map((item) => (
           <Stack key={item.title} p={3} cursor={"pointer"} spacing={3}>
             <Image src={item.image} alt={item.title} objectFit={"cover"} h={"210px"} w={"300px"} width={"full"} borderRadius={"lg"} />
             <HStack>
-              <Text color={"#e59819"}>{item.reviewAvarage.toFixed(1)}</Text>
+              <Text color={"#e59819"}>{t(item.reviewAvarage.toFixed(1), { ns: "home" })}</Text>
               <ReactStars edit={true} color2="#e59819" value={item.reviewAvarage} />
               <Text opacity={".8"}>({item.reviewCount})</Text>
             </HStack>

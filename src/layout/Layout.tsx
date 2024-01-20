@@ -2,8 +2,8 @@ import { Box, Container, transition } from "@chakra-ui/react";
 import { LayoutProps } from "./layout.props";
 import Header from "./header/Header";
 import { FunctionComponent, useState } from "react";
-import Sidebar from "./sidebar/Sidebar";
 import Footer from "./footer/Footer";
+import Sidebar from "src/interface/sidebar/Sidebar";
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
   const [toggle, setToggle] = useState(false);

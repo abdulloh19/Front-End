@@ -1,15 +1,22 @@
 import { Box, Button, Flex, HStack, Icon, IconButton, Menu, MenuButton, MenuItem, MenuList, useColorMode, useColorModeValue } from "@chakra-ui/react";
 import { BsFillSunFill, BsFillMoonStarsFill, BsTranslate, BsFilterLeft } from "react-icons/bs";
 import Link from "next/link";
-import { DarkLogo, EngIcons, LightLogo, UzbIcons } from "src/icons";
+import { DarkLogo, LightLogo } from "src/icons";
 import { HiUser } from "react-icons/hi2";
 import { MdContactSupport } from "react-icons/md";
-import { SiGoogletranslate } from "react-icons/si";
-import RusIcons from "src/icons/rus";
 import { HeaderProps } from "./header.props";
+import { language } from "src/config/constants";
+import { useTranslation } from "react-i18next";
+import { TfiWorld } from "react-icons/tfi";
 
 const Header = ({ onToggle }: HeaderProps) => {
   const { toggleColorMode, colorMode } = useColorMode();
+  const { t, i18n } = useTranslation();
+
+  const onLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+  };
+
   return (
     <Box
       zIndex={1005}
@@ -32,7 +39,7 @@ const Header = ({ onToggle }: HeaderProps) => {
         </HStack>
         <HStack>
           <IconButton aria-label="support" colorScheme="facebook" variant={"ghost"} icon={<MdContactSupport />} />
-          <Menu>
+          <Menu placement="bottom">
             <MenuButton
               px={4}
               py={2}
@@ -42,15 +49,25 @@ const Header = ({ onToggle }: HeaderProps) => {
               _hover={{ bg: "gray.400" }}
               _expanded={{ bg: "blue.400" }}
               _focus={{ boxShadow: "outline" }}
-              as={IconButton}
-              icon={<BsTranslate />}
+              as={Button}
+              rightIcon={<TfiWorld />}
               colorScheme="facebook"
               variant={"solid"}
-            />
-            <MenuList>
-              <MenuItem icon={<UzbIcons />}>UZB</MenuItem>
-              <MenuItem icon={<RusIcons />}>RUS</MenuItem>
-              <MenuItem icon={<EngIcons />}>ENG</MenuItem>
+              textTransform={"capitalize"}
+            >
+              {i18n.resolvedLanguage}
+            </MenuButton>
+            <MenuList p={0}>
+              {language.map((item) => (
+                <MenuItem
+                  key={item.lng}
+                  onClick={() => onLanguage(item.lng)}
+                  icon={<item.icon />}
+                  backgroundColor={i18n.resolvedLanguage === item.lng ? "facebook.500" : ""}
+                >
+                  {item.nativeLng}
+                </MenuItem>
+              ))}
             </MenuList>
           </Menu>
           <IconButton
@@ -61,7 +78,7 @@ const Header = ({ onToggle }: HeaderProps) => {
             variant={"outline"}
           />
           <Button rightIcon={<HiUser />} colorScheme="facebook">
-            LOGIN
+            {t("login", { ns: "layout" })}
           </Button>
         </HStack>
       </Flex>

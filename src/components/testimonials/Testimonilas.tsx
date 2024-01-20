@@ -4,21 +4,23 @@ import Carousel from "react-multi-carousel";
 import { testimonilasCarousel } from "src/config/carousel";
 import { Center, Icon, Text } from "@chakra-ui/react";
 import { ImQuotesRight } from "react-icons/im";
+import { useTranslation } from "react-i18next";
 
 const Testimonilas = () => {
+  const { t } = useTranslation();
   return (
     <>
-      <SectionTitle textAlign={"center"} title="Testimonials" subTitle="10,000+ unique online course list designs" />
+      <SectionTitle textAlign={"center"} title={t("testimonials_title", { ns: "home" })} subTitle={t("testimonials_description", { ns: "home" })} />
 
-      <Carousel responsive={testimonilasCarousel} arrows={true} showDots={false} autoPlay={true}  infinite>
+      <Carousel responsive={testimonilasCarousel} arrows={true} showDots={false} autoPlay={true} infinite>
         {data.map((item, idx) => (
           <Center key={idx} flexDirection={"column"} maxW={"container.sm"} mx={"auto"}>
             <Icon as={ImQuotesRight} fontSize={100} />
             <Text mt={5} textAlign={"center"}>
-              {item.description}
+              {t(item.description, { ns: "home" })}
             </Text>
             <Text mt={3} fontSize={"xl"} fontWeight={"bold"}>
-              {item.name}
+              {t(item.name, {ns: "home"})}
             </Text>
           </Center>
         ))}

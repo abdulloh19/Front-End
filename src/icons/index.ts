@@ -14,3 +14,4 @@ export { default as FinishRightIcon } from "./finishRightLine";
 export { default as OnlineLearningIcon } from "./onlineLearning";
 export { default as OnlineCourseIcon } from "./onlineCourse";
 export { default as OnlineStudentIcon } from "./onlineStudent";
+export {default as TurkIcon} from './turk'
