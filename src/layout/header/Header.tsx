@@ -46,13 +46,13 @@ const Header = ({ onToggle }: HeaderProps) => {
               transition="all 0.2s"
               borderRadius="md"
               borderWidth="1px"
-              _hover={{ bg: "gray.400" }}
+              // _hover={{ bg: "gray.400" }}
               _expanded={{ bg: "blue.400" }}
               _focus={{ boxShadow: "outline" }}
               as={Button}
               rightIcon={<TfiWorld />}
-              colorScheme="facebook"
-              variant={"solid"}
+              colorScheme="gray"
+              variant={"outline"}
               textTransform={"capitalize"}
             >
               {i18n.resolvedLanguage}
@@ -74,7 +74,7 @@ const Header = ({ onToggle }: HeaderProps) => {
             aria-label="color-mode"
             onClick={toggleColorMode}
             icon={colorMode == "light" ? <BsFillMoonStarsFill /> : <BsFillSunFill />}
-            colorScheme="facebook"
+            colorScheme="gray"
             variant={"outline"}
           />
           <Button rightIcon={<HiUser />} colorScheme="facebook">
