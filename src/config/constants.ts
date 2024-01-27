@@ -110,45 +110,45 @@ export const categories = [
 ];
 
 export const coursesFilter = [
-	{
-		title: 'filter_category_title',
-		id: 'category',
-		categoryList: [
-			{ name: 'fitler_category_item_1', id: 'web-developments' },
-			{ name: 'fitler_category_item_2', id: 'mobile-application' },
-			{ name: 'fitler_category_item_3', id: 'graphic-design' },
-			{ name: 'fitler_category_item_4', id: 'artificial-intelligence' },
-		],
-	},
-	{
-		title: 'fitler_rating_title',
-		id: 'rating',
-		categoryList: [
-			{ name: 'fitler_rating_item_1', id: '4.5' },
-			{ name: 'fitler_rating_item_2', id: '4' },
-			{ name: 'fitler_rating_item_3', id: '3.5' },
-			{ name: 'fitler_rating_item_4', id: '3' },
-		],
-	},
-	{
-		title: 'filter_language_title',
-		id: 'language',
-		categoryList: [
-			{ name: 'filter_language_item_1', id: 'en' },
-			{ name: 'filter_language_item_2', id: 'ru' },
-			{ name: 'filter_language_item_3', id: 'uz' },
-			{ name: 'filter_language_item_4', id: 'tr' },
-		],
-	},
-	{
-		title: 'filter_level_title',
-		id: 'level',
-		categoryList: [
-			{ name: 'filter_level_item_1', id: 'beginner' },
-			{ name: 'filter_level_item_2', id: 'medium' },
-			{ name: 'filter_level_item_3', id: 'proffessional' },
-		],
-	},
+  {
+    title: "filter_category_title",
+    id: "category",
+    categoryList: [
+      { name: "fitler_category_item_1", id: "web-developments" },
+      { name: "fitler_category_item_2", id: "mobile-application" },
+      { name: "fitler_category_item_3", id: "graphic-design" },
+      { name: "fitler_category_item_4", id: "artificial-intelligence" },
+    ],
+  },
+  {
+    title: "fitler_rating_title",
+    id: "rating",
+    categoryList: [
+      { name: "fitler_rating_item_1", id: "4.5" },
+      { name: "fitler_rating_item_2", id: "4" },
+      { name: "fitler_rating_item_3", id: "3.5" },
+      { name: "fitler_rating_item_4", id: "3" },
+    ],
+  },
+  {
+    title: "filter_language_title",
+    id: "language",
+    categoryList: [
+      { name: "filter_language_item_1", id: "en" },
+      { name: "filter_language_item_2", id: "ru" },
+      { name: "filter_language_item_3", id: "uz" },
+      { name: "filter_language_item_4", id: "tr" },
+    ],
+  },
+  {
+    title: "filter_level_title",
+    id: "level",
+    categoryList: [
+      { name: "filter_level_item_1", id: "beginner" },
+      { name: "filter_level_item_2", id: "medium" },
+      { name: "filter_level_item_3", id: "proffessional" },
+    ],
+  },
 ];
 
 export const trustedCompeny = [AiFillAmazonCircle, SiAmd, SiCisco, FaApplePay, SiLogitech, SiSpotify];
@@ -259,4 +259,35 @@ export const courses: CourseType[] = [
       avatar: "https://media.graphassets.com/NfxHACAlR4CkvdhnB3gs",
     },
   },
+];
+
+export const booksCategory = [
+	{
+		label: 'filter_all_category',
+		id: 'all-categories',
+	},
+	{
+		label: 'filter_programmin',
+		id: 'programming',
+	},
+	{
+		label: 'filter_design',
+		id: 'design',
+	},
+	{
+		label: 'filter_business',
+		id: 'business',
+	},
+	{
+		label: 'filter_history',
+		id: 'history',
+	},
+	{
+		label: 'filter_writing',
+		id: 'writing',
+	},
+	{
+		label: 'filter_lifestyle',
+		id: 'lifestyle',
+	},
 ];
