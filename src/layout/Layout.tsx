@@ -3,7 +3,8 @@ import { LayoutProps } from "./layout.props";
 import Header from "./header/Header";
 import { FunctionComponent, useState } from "react";
 import Footer from "./footer/Footer";
-import Sidebar from "src/interface/sidebar/Sidebar";
+import Sidebar from "./sidebar/Sidebar";
+// import Sidebar from "src/interface/sidebar/Sidebar";
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
   const [toggle, setToggle] = useState(false);

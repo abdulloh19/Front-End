@@ -2,9 +2,9 @@ import { Box, Button, Container, HStack, Icon, Text, useColorModeValue } from "@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
-import { navigation } from "src/config/constants";
 import { SidebarProps } from "./sidebar.props";
 import { useTranslation } from "react-i18next";
+import { navigation } from "src/config/constants";
 
 const Sidebar = ({ toggle }: SidebarProps) => {
   const router = useRouter();

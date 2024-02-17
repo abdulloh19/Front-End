@@ -1,13 +1,13 @@
-import React from 'react'
-import { withLayout } from 'src/layout/Layout'
-import { HomePageComponent } from 'src/pageComponent'
+import React, { useEffect } from "react";
+import { withLayout } from "src/layout/Layout";
+import { HomePageComponent } from "src/pageComponent";
 
 const Home = () => {
   return (
     <div>
-      <HomePageComponent/>
+      <HomePageComponent />
     </div>
-  )
-}
+  );
+};
 
-export default withLayout(Home)
+export default withLayout(Home);
