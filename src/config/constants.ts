@@ -262,32 +262,63 @@ export const courses: CourseType[] = [
 ];
 
 export const booksCategory = [
-	{
-		label: 'filter_all_category',
-		id: 'all-categories',
+  {
+    label: "filter_all_category",
+    id: "all-categories",
+  },
+  {
+    label: "filter_programmin",
+    id: "programming",
+  },
+  {
+    label: "filter_design",
+    id: "design",
+  },
+  {
+    label: "filter_business",
+    id: "business",
+  },
+  {
+    label: "filter_history",
+    id: "history",
+  },
+  {
+    label: "filter_writing",
+    id: "writing",
+  },
+  {
+    label: "filter_lifestyle",
+    id: "lifestyle",
+  },
+];
+
+export const faq = [
+  {
+		question: 'faq_question_1',
+		answer: 'faq_answer_1',
 	},
 	{
-		label: 'filter_programmin',
-		id: 'programming',
+		question: 'faq_question_2',
+		answer: 'faq_answer_2',
 	},
 	{
-		label: 'filter_design',
-		id: 'design',
+		question: 'faq_question_3',
+		answer: 'faq_answer_3',
 	},
 	{
-		label: 'filter_business',
-		id: 'business',
+		question: 'faq_question_4',
+		answer: 'faq_answer_4',
 	},
 	{
-		label: 'filter_history',
-		id: 'history',
+		question: 'faq_question_5',
+		answer: 'faq_answer_5',
 	},
 	{
-		label: 'filter_writing',
-		id: 'writing',
+		question: 'faq_question_6',
+		answer: 'faq_answer_6',
 	},
 	{
-		label: 'filter_lifestyle',
-		id: 'lifestyle',
+		question: 'faq_question_7',
+		answer: 'faq_answer_7',
 	},
 ];

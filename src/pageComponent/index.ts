@@ -6,3 +6,4 @@ export {default as ArticleDetailedComponent} from './articlePageComponent/Articl
 export {default as AboutPageComponent} from './aboutPageComponent/AboutPageComponent'
 export {default as ContactPageComponent} from './contactPageComponent/ContactPageComponent'
 export {default as PricingPageComponent} from './pricingPageComponent/PricingPageComponent'
+export {default as FaqPageComponent} from './faqPageComponent/FaqPageComponent'
