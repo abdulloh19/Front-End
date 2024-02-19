@@ -8,7 +8,11 @@ export interface ArticleType {
   slug: string;
   title: string;
   author: AuthorType;
-  language: string;
+  lenguage: string;
+  description: {
+    text: string;
+    raw: [];
+  };
 }
 
 export interface AuthorType {
