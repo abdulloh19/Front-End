@@ -6,4 +6,13 @@ export { default as Newsletter } from "./newsletter/Newsletter";
 export { default as PopularCourses } from "./popularCourses/PopularCourses";
 export { default as Sposorship } from "./sposorship/Sposorship";
 export { default as Testimonilas } from "./testimonials/Testimonilas";
-export {default as Pricing} from './priceng/pricing'
+export { default as Pricing } from "./priceng/pricing";
+export { default as Login } from "./Login/Login";
+export { default as Register } from "./Register/Register";
+export { default as Verification } from "./Verification/Verification";
+export { default as SocialMedia } from "./SocialMedia/SocialMedia";
+export { default as AccountRecovery } from "./accountRecovery/AccountRecovery";
+export { default as Overview } from "./Overview/Overview";
+export { default as Review } from "./Review/Review";
+export { default as Curriculum } from "./Curriculum/Curriculum";
+export { default as Mentor } from "./Mentor/Mentor";

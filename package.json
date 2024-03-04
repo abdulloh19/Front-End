@@ -28,7 +28,7 @@
 		"i18next": "^22.5.1",
 		"i18next-browser-languagedetector": "^7.2.0",
 		"i18next-http-backend": "^2.4.2",
-		"js-cookie": "^3.0.1",
+		"js-cookie": "^3.0.5",
 		"next": "13.1.6",
 		"next-auth": "^4.21.0",
 		"nprogress": "^0.2.0",
@@ -50,7 +50,7 @@
 	},
 	"devDependencies": {
 		"@types/cookie": "^0.5.1",
-		"@types/js-cookie": "^3.0.3",
+		"@types/js-cookie": "^3.0.6",
 		"@types/node": "18.14.0",
 		"@types/nprogress": "^0.2.3",
 		"@types/react": "18.0.28",

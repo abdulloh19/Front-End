@@ -1,4 +1,16 @@
-import { Box, Button, Divider, Flex, HStack, Heading, Icon, Image, Stack, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Divider,
+  Flex,
+  HStack,
+  Heading,
+  Icon,
+  Image,
+  Stack,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import { AllCoursesCardProps } from "./allCoursesCard.props";
 import ReactStars from "react-stars";
 import { CiViewList } from "react-icons/ci";
@@ -6,13 +18,27 @@ import { AiOutlineClockCircle } from "react-icons/ai";
 import { SiGoogleanalytics } from "react-icons/si";
 import { BsMinecartLoaded } from "react-icons/bs";
 import { BiDetail } from "react-icons/bi";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const AllCoursesCard = ({ course }: AllCoursesCardProps) => {
+  const router = useRouter();
+
+  const coursesDetailedRouter = () => router.push(`/courses/${course.slug}`);
   return (
     <>
       <Box py={4}>
         <Flex gap={4} direction={{ base: "column", md: "row" }}>
-          <Image src={course.image} alt={course.title} w={{ base: "full", md: "250px" }} h={"250px"} borderRadius={"lg"} objectFit={"cover"} />
+          <Image
+            src={course.image}
+            alt={course.title}
+            w={{ base: "full", md: "250px" }}
+            h={"250px"}
+            borderRadius={"lg"}
+            objectFit={"cover"}
+            onClick={coursesDetailedRouter}
+            cursor={"pointer"}
+          />
           <Stack>
             <HStack>
               <Text color={"#e59819"}>{course.reviewAvarage.toFixed(1)}</Text>
@@ -20,7 +46,10 @@ const AllCoursesCard = ({ course }: AllCoursesCardProps) => {
               <Text opacity={".8"}>({course.reviewCount})</Text>
             </HStack>
             <Heading fontSize={"xl"}>{course.title}</Heading>
-            <Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos eaque quasi repellendus saepe, facilis pariatur.</Text>
+            <Text>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos eaque quasi repellendus saepe,
+              facilis pariatur.
+            </Text>
             <Flex gap={2} fontSize={"14px"} direction={{ base: "column", sm: "row" }}>
               <HStack align={"center"}>
                 <Image src={course.author.avatar} w={50} h={50} borderRadius={"full"} />
@@ -44,7 +73,12 @@ const AllCoursesCard = ({ course }: AllCoursesCardProps) => {
               </HStack>
             </Flex>
             <Divider mt={1} />
-            <Flex align={{ base: "flex-start", md: "center" }} justify={"space-between"} mt={2} direction={{ base: "column", md: "row" }}>
+            <Flex
+              align={{ base: "flex-start", md: "center" }}
+              justify={"space-between"}
+              mt={2}
+              direction={{ base: "column", md: "row" }}
+            >
               <Text fontSize={"xl"} fontWeight={"bold"}>
                 {course.price.toLocaleString("en-US", { style: "currency", currency: "USD" })}
               </Text>
@@ -52,7 +86,13 @@ const AllCoursesCard = ({ course }: AllCoursesCardProps) => {
                 <Button rightIcon={<BsMinecartLoaded />} colorScheme="facebook">
                   Add to card
                 </Button>
-                <Button rightIcon={<BiDetail />} colorScheme="facebook" variant={"outline"}>
+                <Button
+                  onClick={coursesDetailedRouter}
+                  cursor={"pointer"}
+                  rightIcon={<BiDetail />}
+                  colorScheme="facebook"
+                  variant={"outline"}
+                >
                   Detail
                 </Button>
               </Flex>

@@ -171,6 +171,7 @@ export const howItWorks = [
 export const courses: CourseType[] = [
   {
     image: "https://media.graphassets.com/3gf746AKRbWNjB8OCoEB",
+    slug: "javascript",
     title: "JavaScript full course",
     lessonCount: 96,
     totalHour: 13.6,
@@ -186,6 +187,7 @@ export const courses: CourseType[] = [
   },
   {
     image: "https://media.graphassets.com/54vR0DStGoFuZBVkFwWQ",
+    slug: "vuejs",
     title: "VueJS full course",
     lessonCount: 30,
     totalHour: 10.6,
@@ -201,6 +203,7 @@ export const courses: CourseType[] = [
   },
   {
     image: "https://media.graphassets.com/65rcPxsLT9ysJDisXF80",
+    slug: "reactjs",
     title: "ReactJS full course",
     lessonCount: 70,
     totalHour: 19,
@@ -216,6 +219,7 @@ export const courses: CourseType[] = [
   },
   {
     image: "https://media.graphassets.com/xactyo8TtyTIkAcMWvSm",
+    slug: "vuex",
     title: "VueX full course",
     lessonCount: 120,
     totalHour: 24.6,
@@ -231,6 +235,7 @@ export const courses: CourseType[] = [
   },
   {
     image: "https://media.graphassets.com/Ql2hDpJhQsaBT3inNuZ4",
+    slug: "redux",
     title: "Redux full course",
     lessonCount: 39,
     totalHour: 8.2,
@@ -246,6 +251,7 @@ export const courses: CourseType[] = [
   },
   {
     image: "https://media.graphassets.com/mDcwhbguQpyM74jb18M5",
+    slug: "nodejs",
     title: "NodeJS full course",
     lessonCount: 56,
     totalHour: 20.6,
@@ -320,5 +326,28 @@ export const faq = [
 	{
 		question: 'faq_question_7',
 		answer: 'faq_answer_7',
+	},
+];
+
+export const avatars = [
+	{
+		name: 'Ryan Florence',
+		url: 'https://bit.ly/ryan-florence',
+	},
+	{
+		name: 'Segun Adebayo',
+		url: 'https://bit.ly/sage-adebayo',
+	},
+	{
+		name: 'Kent Dodds',
+		url: 'https://bit.ly/kent-c-dodds',
+	},
+	{
+		name: 'Prosper Otemuyiwa',
+		url: 'https://bit.ly/prosper-baba',
+	},
+	{
+		name: 'Christian Nwamba',
+		url: 'https://bit.ly/code-beast',
 	},
 ];
