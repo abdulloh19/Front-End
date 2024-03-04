@@ -3,18 +3,26 @@ import { redirect } from "next/dist/server/api-utils";
 import { ArticleType } from "src/interface/article.interface";
 import { Lenguage } from "src/interface/constants.interface";
 import { withLayout } from "src/layout/Layout";
+import Seo from "src/layout/seo/seo";
 import { ArticleDetailedComponent } from "src/pageComponent";
 import { Articles } from "src/services/article.service";
 
 const ArticlesDetailPage = ({ article }: ArticleDetailedPageProps) => {
   console.log(article);
 
-  return <ArticleDetailedComponent article={article} />;
+  return (
+    <Seo metaTitle={article.title} metaDescription={article.excerpt}>
+      <ArticleDetailedComponent article={article} />
+    </Seo>
+  );
 };
 
 export default withLayout(ArticlesDetailPage);
 
-export const getServerSideProps: GetServerSideProps<ArticleDetailedPageProps> = async ({ query, req }) => {
+export const getServerSideProps: GetServerSideProps<ArticleDetailedPageProps> = async ({
+  query,
+  req,
+}) => {
   const slug = query.slug as string;
   const lng: Lenguage = req.cookies.i18next as Lenguage;
   const article = await Articles.getDetailedArticle(slug);
@@ -27,7 +35,7 @@ export const getServerSideProps: GetServerSideProps<ArticleDetailedPageProps> = 
   return {
     redirect: {
       destination: "/articles",
-      permanent: false
+      permanent: false,
     },
   };
 };
