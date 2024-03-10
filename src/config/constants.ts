@@ -1,5 +1,10 @@
 import { AiFillAmazonCircle, AiOutlineDashboard, AiOutlineDollar } from "react-icons/ai";
-import { FaApplePay, FaBookReader, FaDraftingCompass, FaQuestionCircle } from "react-icons/fa";
+import {
+  FaApplePay,
+  FaBookReader,
+  FaDraftingCompass,
+  FaQuestionCircle,
+} from "react-icons/fa";
 import { CiViewList } from "react-icons/ci";
 import { MdImportContacts, MdOutlineContactMail } from "react-icons/md";
 // import { AnnouncementIcons, CodingIcons, DesignIcons, LaptopIcons, PersonIcons, PrintIcons } from 'src/icons';
@@ -151,7 +156,14 @@ export const coursesFilter = [
   },
 ];
 
-export const trustedCompeny = [AiFillAmazonCircle, SiAmd, SiCisco, FaApplePay, SiLogitech, SiSpotify];
+export const trustedCompeny = [
+  AiFillAmazonCircle,
+  SiAmd,
+  SiCisco,
+  FaApplePay,
+  SiLogitech,
+  SiSpotify,
+];
 
 export const language = [
   { nativeLng: "English", lng: "en", icon: EngIcons },
@@ -300,54 +312,77 @@ export const booksCategory = [
 
 export const faq = [
   {
-		question: 'faq_question_1',
-		answer: 'faq_answer_1',
-	},
-	{
-		question: 'faq_question_2',
-		answer: 'faq_answer_2',
-	},
-	{
-		question: 'faq_question_3',
-		answer: 'faq_answer_3',
-	},
-	{
-		question: 'faq_question_4',
-		answer: 'faq_answer_4',
-	},
-	{
-		question: 'faq_question_5',
-		answer: 'faq_answer_5',
-	},
-	{
-		question: 'faq_question_6',
-		answer: 'faq_answer_6',
-	},
-	{
-		question: 'faq_question_7',
-		answer: 'faq_answer_7',
-	},
+    question: "faq_question_1",
+    answer: "faq_answer_1",
+  },
+  {
+    question: "faq_question_2",
+    answer: "faq_answer_2",
+  },
+  {
+    question: "faq_question_3",
+    answer: "faq_answer_3",
+  },
+  {
+    question: "faq_question_4",
+    answer: "faq_answer_4",
+  },
+  {
+    question: "faq_question_5",
+    answer: "faq_answer_5",
+  },
+  {
+    question: "faq_question_6",
+    answer: "faq_answer_6",
+  },
+  {
+    question: "faq_question_7",
+    answer: "faq_answer_7",
+  },
 ];
 
 export const avatars = [
-	{
-		name: 'Ryan Florence',
-		url: 'https://bit.ly/ryan-florence',
-	},
-	{
-		name: 'Segun Adebayo',
-		url: 'https://bit.ly/sage-adebayo',
-	},
-	{
-		name: 'Kent Dodds',
-		url: 'https://bit.ly/kent-c-dodds',
-	},
-	{
-		name: 'Prosper Otemuyiwa',
-		url: 'https://bit.ly/prosper-baba',
-	},
-	{
-		name: 'Christian Nwamba',
-		url: 'https://bit.ly/code-beast',
-	},
+  {
+    name: "Ryan Florence",
+    url: "https://bit.ly/ryan-florence",
+  },
+  {
+    name: "Segun Adebayo",
+    url: "https://bit.ly/sage-adebayo",
+  },
+  {
+    name: "Kent Dodds",
+    url: "https://bit.ly/kent-c-dodds",
+  },
+  {
+    name: "Prosper Otemuyiwa",
+    url: "https://bit.ly/prosper-baba",
+  },
+  {
+    name: "Christian Nwamba",
+    url: "https://bit.ly/code-beast",
+  },
+];
+
+export const voiceLanguages = [
+  {
+    language: "en",
+    codes: "en-US",
+    voiceURI: "Microsoft David - English (United States)",
+  },
+  {
+    language: "ru",
+    codes: "ru-RU",
+    voiceURI: "Microsoft Dmitry Online (Natural) - Russian (Russia)",
+  },
+  {
+    language: "tr",
+    codes: "tr-TR",
+    voiceURI: "Microsoft Ahmet Online (Natural) - Turkish (Turkey)",
+  },
+  {
+    language: "uz",
+    codes: "uz-UZ",
+    voiceURI: "Microsoft Sardor Online (Natural) - Uzbek (Uzbekistan)",
+  },
 ];

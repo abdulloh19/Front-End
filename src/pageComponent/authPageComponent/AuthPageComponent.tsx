@@ -16,17 +16,24 @@ import {
 import AuthNavbarComponent from "./AuthNavbarComponent";
 import { avatars } from "src/config/constants";
 import { useState } from "react";
-import { AccountRecovery, Login, Register, SocialMedia, Verification } from "src/components";
+import {
+  AccountRecovery,
+  Login,
+  Register,
+  SocialMedia,
+  Verification,
+} from "src/components";
 import { t } from "i18next";
 
 const AuthPageComponent = () => {
-  const [state, setState] = useState<"login" | "register" | "verification" | "account-recovery">(
-    "account-recovery"
-  );
+  const [state, setState] = useState<
+    "login" | "register" | "verification" | "account-recovery"
+  >("login");
   const breakPointValue = useBreakpointValue({ base: "md", md: "lg" });
 
-  const onNavigateStateComponent = (component: "login" | "register" | "verification" | "account-recovery") =>
-    setState(component);
+  const onNavigateStateComponent = (
+    component: "login" | "register" | "verification" | "account-recovery"
+  ) => setState(component);
 
   const renderStateComponent = () => {
     switch (state) {
@@ -53,9 +60,16 @@ const AuthPageComponent = () => {
           py={{ base: 10, sm: 20 }}
         >
           <Stack spacing={{ base: 10, md: 20 }}>
-            <Heading lineHeight={1.1} fontSize={{ base: "3xl", sm: "4xl", md: "5xl", lg: "6xl" }}>
+            <Heading
+              lineHeight={1.1}
+              fontSize={{ base: "3xl", sm: "4xl", md: "5xl", lg: "6xl" }}
+            >
               {t("authTitle_1", { ns: "global" })}{" "}
-              <Text as={"span"} bgGradient={"linear(to-r, gray.400, facebook.400)"} bgClip={"text"}>
+              <Text
+                as={"span"}
+                bgGradient={"linear(to-r, gray.400, facebook.400)"}
+                bgClip={"text"}
+              >
                 &
               </Text>{" "}
               {t("authTitle_2", { ns: "global" })}

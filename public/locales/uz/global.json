@@ -62,5 +62,8 @@
 	"account_recovery_btn_form2": "Tasdiqlash",
 	"account_recovery_title_form3": "Yangi parol",
 	"account_recovery_description_form3": "Hisobni qaytarish va kurslarimiz va xizmatlarimizdan bahramand bo'lish uchun oxirgi qadam.",
-	"account_recovery_btn_form3": "Yuborish"
+	"account_recovery_btn_form3": "Yuborish",
+  "start_reading_article": "Sun'iy intellekt maqolani o'qishni boshlaydi",
+  "stop": "To'xtash",
+  "start_btn": "Maqolani tinglashni boshlang"
 }

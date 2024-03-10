@@ -12,16 +12,21 @@ import {
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { BsFillSunFill, BsFillMoonStarsFill, BsTranslate, BsFilterLeft } from "react-icons/bs";
+import {
+  BsFillSunFill,
+  BsFillMoonStarsFill,
+  BsTranslate,
+  BsFilterLeft,
+} from "react-icons/bs";
 import Link from "next/link";
 import { DarkLogo, LightLogo } from "src/icons";
 import { HiUser } from "react-icons/hi2";
-import { MdContactSupport } from "react-icons/md";
 import { HeaderProps } from "./header.props";
 import { language } from "src/config/constants";
 import { useTranslation } from "react-i18next";
 import { TfiWorld } from "react-icons/tfi";
 import { useRouter } from "next/router";
+import { IoMdLogIn } from "react-icons/io";
 
 const Header = ({ onToggle }: HeaderProps) => {
   const { toggleColorMode, colorMode } = useColorMode();
@@ -54,12 +59,6 @@ const Header = ({ onToggle }: HeaderProps) => {
           <Link href={"/"}>{colorMode === "light" ? <DarkLogo /> : <LightLogo />}</Link>
         </HStack>
         <HStack>
-          <IconButton
-            aria-label="support"
-            colorScheme="facebook"
-            variant={"ghost"}
-            icon={<MdContactSupport />}
-          />
           <Menu placement="bottom">
             <MenuButton
               px={4}
@@ -83,7 +82,9 @@ const Header = ({ onToggle }: HeaderProps) => {
                   key={item.lng}
                   onClick={() => onLanguage(item.lng)}
                   icon={<item.icon />}
-                  backgroundColor={i18n.resolvedLanguage === item.lng ? "facebook.500" : ""}
+                  backgroundColor={
+                    i18n.resolvedLanguage === item.lng ? "facebook.500" : ""
+                  }
                 >
                   {item.nativeLng}
                 </MenuItem>
@@ -97,9 +98,22 @@ const Header = ({ onToggle }: HeaderProps) => {
             colorScheme="gray"
             variant={"outline"}
           />
-          <Button rightIcon={<HiUser />} onClick={() => router.push("/auth")} colorScheme="facebook">
+          <Button
+            rightIcon={<HiUser />}
+            onClick={() => router.push("/auth")}
+            colorScheme="facebook"
+            display={{ base: "none", md: "flex" }}
+          >
             {t("login", { ns: "layout" })}
           </Button>
+          <IconButton
+            display={{ base: "flex", md: "none" }}
+            aria-label="color-mode"
+            onClick={() => router.push("/auth")}
+            icon={<IoMdLogIn />}
+            colorScheme="gray"
+            variant={"outline"}
+          />
         </HStack>
       </Flex>
     </Box>
