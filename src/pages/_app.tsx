@@ -11,9 +11,10 @@ import nProgress from "nprogress";
 import "nprogress/nprogress.css";
 import { useEffect } from "react";
 import { Router } from "next/router";
+import { Provider } from "react-redux";
+import { store } from "src/store/store";
 
 nProgress.configure({ showSpinner: false });
-
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -33,13 +34,15 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <HydrationProvider>
-      <I18nextProvider i18n={i18n}>
-        <ChakraProvider theme={theme}>
-          <Client>
-            <Component {...pageProps} />
-          </Client>
-        </ChakraProvider>
-      </I18nextProvider>
+      <Provider store={store}>
+        <I18nextProvider i18n={i18n}>
+          <ChakraProvider theme={theme}>
+            <Client>
+              <Component {...pageProps} />
+            </Client>
+          </ChakraProvider>
+        </I18nextProvider>
+      </Provider>
     </HydrationProvider>
   );
 }
